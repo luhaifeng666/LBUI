@@ -1,7 +1,7 @@
 {
-  "name": "bui",
+  "name": "lhf-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "main": "./dist/bui.common.js",
   "files": [
     "dist/*",
