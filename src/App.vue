@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Loading  :loading="loading" />
+    <ul id="nav">
+      <li><router-link to="/loading">Loading</router-link></li>  
+    </ul>
+    
+    <transition name="fade">
+        <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-import Loading from './components/Loading/Loading'
-
 export default {
-  components: {
-    Loading
-  },
-
   data () {
     return {
-      loading: true
+      
     }
   }
 }
@@ -30,10 +30,30 @@ export default {
   color #2c3e50
 
 #nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
+  li
+    border-bottom 1px solid #ddd
+    padding 10px 0
+    a
+      text-decoration none
+      color #333
+
+      &.router-link-exact-active
+       color #42b983
+
+.review-content
+  background #ffffff
+  position fixed
+  height 100%
+  width 100%
+  left 100% 
+  top 0
+  z-index 999
+
+  .fade-enter-active
+  .fade-leave-active 
+    transition: all .3s ease
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform translateX(100%)
+  }
 </style>
