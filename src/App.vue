@@ -40,20 +40,11 @@ export default {
       &.router-link-exact-active
        color #42b983
 
-.review-content
-  background #ffffff
-  position fixed
-  height 100%
-  width 100%
-  left 100% 
-  top 0
-  z-index 999
+.fade-enter-active
+.fade-leave-active 
+  transition: all .3s ease
 
-  .fade-enter-active
-  .fade-leave-active 
-    transition: all .3s ease
-
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    transform translateX(100%)
-  }
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform translateX(100%)
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="loading-box">
     <Loading :loading="loading">加载中</Loading> 
   </div>
 </template>
@@ -21,7 +21,12 @@ export default {
 </script>
 
 <style lang="stylus">
-
+  .loading-box
+    position fixed
+    width 100%
+    height 100%
+    top 0
+    left 0
 </style>
 
 
