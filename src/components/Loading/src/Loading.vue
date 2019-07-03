@@ -1,5 +1,5 @@
 <template>
-  <div class="bui-loading" v-show="loading">
+  <div class="bui-loading" v-show="loading" :style="`background-color:${background}`" @click="handle">
     <div class="bui-loading-content">
       <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
       <slot>加载中...</slot>
@@ -9,10 +9,20 @@
 
 <script>
 export default {
+  name: 'lb-loading',
   props: {
     loading: {
       type: Boolean,
       default: false
+    },
+    background: {
+      type: String,
+      default: '#fff'
+    }
+  },
+  methods: {
+    handle () {
+      this.$emit('handle')
     }
   }
 }
@@ -34,10 +44,12 @@ export default {
     .bui-loading-content
       background #000
       color #ffffff
-      padding 10px
-      border-radius 6px
+      padding 1rem
+      border-radius .6rem
       text-align center
-      font-size 12px
+      font-size 1.2rem
+      i 
+        margin-right: .6rem
 </style>
 
 
