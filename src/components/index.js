@@ -1,12 +1,23 @@
-import Vue from 'vue'
-import Loading from './Loading/Loading.vue'
+import Loading from './Loading/index'
 
-const COMPONENTS = {
+const components = [
+  Loading
+]
+
+const install = function(Vue, opt = {}) {
+  components.forEach(component => {
+    Vue.component(component.name, component)
+  })
+}
+
+// 单个引入
+export {
+  install, 
   Loading
 }
 
-Object.keys(COMPONENTS).forEach(item => {
-  Vue.component(item, COMPONENTS[item])
-})
-
-export default COMPONENTS
+// 整体引入
+export default {
+  install,
+  Loading
+}

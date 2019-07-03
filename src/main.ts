@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import 'font-awesome/css/font-awesome.min'
 import '@/assets/reset'
+import LBUI from './components/index'
+
+Vue.use(LBUI)
 
 Vue.config.productionTip = false
 

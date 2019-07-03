@@ -14,7 +14,7 @@
 export default {
   data () {
     return {
-      
+
     }
   }
 }
@@ -32,10 +32,11 @@ export default {
 #nav
   li
     border-bottom 1px solid #ddd
-    padding 10px 0
+    padding 1.2rem 0
     a
       text-decoration none
       color #333
+      font-size 1.5rem
 
       &.router-link-exact-active
        color #42b983
