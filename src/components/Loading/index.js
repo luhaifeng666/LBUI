@@ -1,6 +1,6 @@
 import Loading from './src/Loading.vue';
 
-Loading.install = function(Vue) {
+Loading.install = (Vue, opt = {}) => {
   Vue.component(Loading.name, Loading)
 };
 

@@ -1,7 +1,9 @@
 import Loading from './Loading/index'
+import Button from './Button/index'
 
 const components = [
-  Loading
+  Loading,
+  Button
 ]
 
 const install = function(Vue, opt = {}) {
@@ -10,14 +12,16 @@ const install = function(Vue, opt = {}) {
   })
 }
 
-// // 单个引入
-// export {
-//   install, 
-//   Loading
-// }
+// 单个引入
+export {
+  install, 
+  Loading,
+  Button
+}
 
 // 整体引入
 export default {
   install,
-  Loading
+  Loading,
+  Button
 }

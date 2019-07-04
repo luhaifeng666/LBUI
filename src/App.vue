@@ -2,10 +2,12 @@
   <div id="app">
     <ul id="nav">
       <li><router-link to="/loading">Loading</router-link></li>  
+      <li><router-link to="/buttons">Buttons</router-link></li>  
     </ul>
     
     <transition name="fade">
-        <router-view></router-view>
+        <router-view name="lb-loading"></router-view>
+        <router-view name="lb-buttons"></router-view>
     </transition>
   </div>
 </template>
