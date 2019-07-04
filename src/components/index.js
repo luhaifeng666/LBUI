@@ -10,11 +10,11 @@ const install = function(Vue, opt = {}) {
   })
 }
 
-// 单个引入
-export {
-  install, 
-  Loading
-}
+// // 单个引入
+// export {
+//   install, 
+//   Loading
+// }
 
 // 整体引入
 export default {
