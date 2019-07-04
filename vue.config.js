@@ -6,11 +6,7 @@ function resolve (dir) {
 
 module.exports = {
   configureWebpack: config => {
-    config.resolve = {
-      extensions: ['.js', '.vue', '.json', '.css', '.ts'],
-      alias: {
-        '@': resolve('src')
-      }
-    }
+    config.resolve.extensions = ['.js', '.vue', '.json', '.css', '.ts']
+    config.resolve.alias['@'] = resolve('src')
   }
 }
