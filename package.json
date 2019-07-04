@@ -1,6 +1,6 @@
 {
-  "name": "lb-ui",
-  "version": "0.2.0",
+  "name": "lhf-ui",
+  "version": "0.3.0",
   "private": false,
   "main": "./dist/lbui.common.js",
   "files": [
