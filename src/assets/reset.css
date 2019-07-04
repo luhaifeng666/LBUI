@@ -59,20 +59,11 @@ a {text-decoration: none;}
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #E4E4E4;
 }
-
-.el-button--primary,
-.el-button--primary.is-active, 
-.el-button--primary:active {
-	background-color: #a98c65!important;
-    border-color: #a98c65!important;
-}
-
-.el-button:hover,
-.el-button--primary.is-disabled, 
-.el-button--primary.is-disabled:active, 
-.el-button--primary.is-disabled:focus, 
-.el-button--primary.is-disabled:hover {
-	color: #a98c65!important;
-    border-color: #a98c65!important;
-    background-color: #F6F3EF!important;
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #fff;
 }

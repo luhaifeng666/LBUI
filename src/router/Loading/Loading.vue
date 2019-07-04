@@ -1,5 +1,5 @@
 <template>
-  <div class="loading-box">
+  <div class="overlay">
     <lb-loading 
       :loading="loading" 
       :background="background"
@@ -24,14 +24,5 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-  .loading-box
-    position fixed
-    width 100%
-    height 100%
-    top 0
-    left 0
-</style>
 
 

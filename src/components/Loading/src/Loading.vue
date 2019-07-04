@@ -1,6 +1,6 @@
 <template>
-  <div class="bui-loading" v-show="loading" :style="`background-color:${background}`" @click="handle">
-    <div class="bui-loading-content">
+  <div class="lb-loading" v-show="loading" :style="`background-color:${background}`" @click="handle">
+    <div class="lb-loading-content">
       <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
       <slot>加载中...</slot>
     </div>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="stylus">
-  .bui-loading
+  .lb-loading
     position fixed
     width 100%
     height 100%
@@ -41,7 +41,7 @@ export default {
     background #fff
     justify-content center
 
-    .bui-loading-content
+    .lb-loading-content
       background #000
       color #ffffff
       padding 1rem
