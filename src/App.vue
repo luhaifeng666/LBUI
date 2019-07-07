@@ -1,8 +1,12 @@
 <template>
   <div id="app">
     <ul id="nav">
-      <li><router-link to="/loading">Loading</router-link></li>  
-      <li><router-link to="/buttons">Buttons</router-link></li>  
+      <li v-for="(item, index) in menus" :key="index">
+        <router-link :to="item.url">
+          {{item.name}}
+          <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </router-link>
+      </li>
     </ul>
     
     <transition name="fade">
@@ -16,7 +20,10 @@
 export default {
   data () {
     return {
-
+      menus: [
+        {name: 'Loading', url: '/loading'},
+        {name: 'Button', url: '/Buttons'},
+      ]
     }
   }
 }
@@ -34,11 +41,16 @@ export default {
 #nav
   li
     border-bottom 1px solid #ddd
-    padding 1.2rem 0
+    padding 1.2rem 1rem
     a
       text-decoration none
       color #333
       font-size 1.5rem
+      display block
+      text-align left 
+
+      i  
+        float right 
 
       &.router-link-exact-active
        color #42b983

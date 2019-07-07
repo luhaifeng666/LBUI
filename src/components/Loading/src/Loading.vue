@@ -1,5 +1,6 @@
 <template>
-  <div class="lb-loading" v-show="loading" :style="`background-color:${background}`" @click="handle">
+  <div class="lb-loading" v-show="loading" :style="`background-color:${background}`">
+    <lb-banner @handle="handle">Loading</lb-banner>
     <div class="lb-loading-content">
       <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
       <slot>加载中...</slot>

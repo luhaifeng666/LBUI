@@ -1,7 +1,7 @@
 <template>
-  <span class="lb-button">
+  <button class="lb-button" :class="type" :disabled="disabled">
     <slot></slot>
-  </span>
+  </button>
 </template>
 
 <script>
@@ -19,6 +19,10 @@ export default {
     type: {
       type: String,
       default: 'normal'
+    },
+    size: {
+      type: String,
+      default: 'sm'
     }
   },
 
@@ -32,10 +36,34 @@ export default {
 
 <style lang="stylus">
   .lb-button
-    padding 1.2rem 2rem
+    padding .6rem 2rem
     border-radius .4rem
-    border 1px solid #333
+    border 1px solid
     display inline-block
     line-height 1
     cursor pointer
+    outline none
+
+    &.normal
+      border-color #dcdfe6
+
+    &.primary
+      color #fff
+      background #409eff
+
+    &.success
+      color #fff
+      background #67c23a
+
+    &.info
+      color #fff
+      background #909399
+
+    &.warning
+      color #fff
+      background #e6a23c
+    
+    &.danger
+      color #fff
+      background #f56c6c 
 </style>
