@@ -1,4 +1,4 @@
-# bui
+# LBUI
 
 ## Project setup
 ```
